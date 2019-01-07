@@ -1,0 +1,131 @@
++ echo 'TASK_NAME: 5c178bce1e9d980016277a44-0-build-rajp-ux_test_repo-11 >&2'
++ echo 'JOB_NAME: 5c178bce1e9d980016277a44-0-build-rajp-ux_test_repo-11 >&2'
++ printenv
++ grep -e NOMAD_
+NOMAD_ALLOC_ID=6ffb81bf-c3ad-a495-c06f-5d1c4d5f6a04
+NOMAD_META_BUILD_AGENT_IMAGE=circleci/picard:0.1.257-4fbba101
+NOMAD_TASK_DIR=/opt/nomad/alloc/6ffb81bf-c3ad-a495-c06f-5d1c4d5f6a04/5c178bce1e9d980016277a44-0-build-rajp-ux_test_repo-11/local
+NOMAD_SECRETS_DIR=/opt/nomad/alloc/6ffb81bf-c3ad-a495-c06f-5d1c4d5f6a04/5c178bce1e9d980016277a44-0-build-rajp-ux_test_repo-11/secrets
+NOMAD_META_DEBUG=false
+NOMAD_JOB_NAME=5c178bce1e9d980016277a44-0-build-rajp-ux_test_repo-11
+NOMAD_CPU_LIMIT=2048
+NOMAD_META_env=envvar-enterprise
+NOMAD_ALLOC_INDEX=0
+NOMAD_ALLOC_DIR=/opt/nomad/alloc/6ffb81bf-c3ad-a495-c06f-5d1c4d5f6a04/alloc
+NOMAD_ALLOC_NAME=5c178bce1e9d980016277a44-0-build-rajp-ux_test_repo-11.5c178bce1e9d980016277a44-0-build-rajp-ux_test_repo-11[0]
+NOMAD_MEMORY_LIMIT=4096
+NOMAD_META_build_agent_image=circleci/picard:0.1.257-4fbba101
+NOMAD_TASK_NAME=5c178bce1e9d980016277a44-0-build-rajp-ux_test_repo-11
+NOMAD_META_debug=false
+NOMAD_META_BUILD_URL=http://10.133.142.192/gh/rajp/ux_test_repo/11
+NOMAD_META_build_url=http://10.133.142.192/gh/rajp/ux_test_repo/11
+NOMAD_META_centrifuge=false
+NOMAD_META_CENTRIFUGE=false
+NOMAD_META_ENV=envvar-enterprise
+++ cat /etc/circleci/public-ipv4
+cat: /etc/circleci/public-ipv4: No such file or directory
+++ true
++ INST_PUBLIC_IP=
++ '[' -z '' ']'
+++ curl --fail --max-time 1 -sSL http://169.254.169.254/latest/meta-data/public-ipv4
+curl: (28) Connection timed out after 1001 milliseconds
+++ true
++ INST_PUBLIC_IP=
++ '[' -z '' ']'
+++ ip addr show eth0
+++ grep 'inet '
+++ head -n1
+++ awk '{print $2}'
+++ cut -f1 -d/
+Device "eth0" does not exist.
++ INST_PUBLIC_IP=
++ '[' -z '' ']'
+++ ip addr show
+++ grep 'inet '
+++ grep -v 127.0.0.1
+++ awk '{print $2}'
+++ cut -f1 -d/
+++ head -n1
++ INST_PUBLIC_IP=10.133.133.48
++ echo 'Public IP set to 10.133.133.48'
+++ docker create --userns=host --cap-add=NET_ADMIN --cap-drop=NET_RAW --cap-drop=MKNOD --security-opt=no-new-privileges --security-opt=apparmor=docker-default --memory=4096m --memory-swap=4096m --cpu-shares=2048 --cpu-quota=-1 --cpu-period=100000 --oom-score-adj=-1000 --volume=/var/run/docker.sock:/var/run/docker.sock --network=ci-privileged --label role=build-agent --label task_id=5c178bce1e9d980016277a44-0-build --label build_uri=http://10.133.142.192/gh/rajp/ux_test_repo/11 -e NO_PROXY=127.0.0.1,localhost,circleci-internal-outer-build-agent -e 'CIRCLE_CUSTOM_CA_CERTS=-----BEGIN CERTIFICATE-----
+MIIDMTCCAhmgAwIBAgIBATANBgkqhkiG9w0BAQsFADA5MQwwCgYDVQQGEwNVU0Ex
+HDAaBgNVBAoTE1JlcGxpY2F0ZWQtYzhlOTQ0ZGIxCzAJBgNVBAsTAkNBMCAXDTE4
+MTIxMjE3NTA0MVoYDzIxMTgxMjEyMTc1MDQyWjA5MQwwCgYDVQQGEwNVU0ExHDAa
+BgNVBAoTE1JlcGxpY2F0ZWQtYzhlOTQ0ZGIxCzAJBgNVBAsTAkNBMIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAviAKXHPzsb7033nKEpu/q2WvC0HwtOt4
+KV6pcHQo/pJNxmbBdVFPp6p/9sPYYQM9JbSBk4eCcerWolP6S4HP0YNppMdse0C7
+8IgEdnNGOBYo5fgXnDF3SlRtR3AP5dUChjSwHvMTicU6Um41PQ98WEGZcnQ629WE
+J5Ke6T2Njbvn9JHQ4yvidZGMkR4MyAoTXgFyIayrDbY4Onks/HC/fWfTDfyE3G7f
+K3HBZwmu++iVM6hATo26Q6+/oUldYEB/Rmi9+1pI9looKX1kwI7ER7IX+SJ1rJ6K
+Qqoc8Um4tzggnBGDTQV7jn6N7hyRKI56M+3z79Vu+MV5yp/pqu+HFwIDAQABo0Iw
+QDAOBgNVHQ8BAf8EBAMCAgQwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQU9Ui7
+djq2EHMhBduxnmIIKAU6yqowDQYJKoZIhvcNAQELBQADggEBAKOFLbvLLpSnAHQa
+yO00plO5veih1BKoxzNY1++DPXwSlv7h7OLKw27n4BY5KzdcZXuEM+5F2IPvRh+5
+bHHCdQscCqlObW2OTf9W1syvlekz/EoC1jOjyacNLQvPBUFT5mfNC1hRKql/gxRt
+L/RO9Ox5yaIMneNEVJGH4N0pcxSLHRVos3TKwtmdmn7l1XL2KEp9w7CHLjXOt+l9
+uPyZF+UIT9+Z9HFI5n4l/xx64dkAqoJLaAxP6hMmpLCzybm3xeoXHhCQ1VuZb1zh
++oHkUvOJqK8L6wqU3v/BRpUZHpdTRmot+Y1W2QyAL+OPCfGKQ73EpPue81gAVGFD
+xahD8Jw=
+-----END CERTIFICATE-----
+' --add-host=output-processor.internal.circleci.com:10.133.142.192 -e GODEBUG=netdns=cgo circleci/picard:0.1.257-4fbba101 circleci _internal build --eventProcessor https://output-processor.internal.circleci.com:8585 --taskId 5c178bce1e9d980016277a44-0-build --advertisedHostIp 10.133.133.48 --buildToken 9a0ee047d57f185973f2889a060b5cd08506cde6
+WARNING: Your kernel does not support swap limit capabilities or the cgroup is not mounted. Memory limited without swap.
++ CONTAINER_ID=717839c5478a9416fe91897b41e24c4ca996b4e513fcef784e98d8c1971dbd07
++ set +e
++ timeout -sTERM 21600 docker start --attach 717839c5478a9416fe91897b41e24c4ca996b4e513fcef784e98d8c1971dbd07
+{"count":1,"level":"info","msg":"statsd metric","name":"config.parsed","tags":["result:succeeded"],"task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:43:15Z","type":"counter"}
+{"allocation_id":"5c178bce1e9d980016277a44-0-build/4EB5DC1B","build_num":"11","build_uri":"http://10.133.142.192/gh/rajp/ux_test_repo/11","level":"info","msg":"task starting","node_index":0,"node_total":1,"project":"git@github-test.extremenetworks.com:rajp/ux_test_repo.git","task-id":"5c178bce1e9d980016277a44-0-build","task_id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:43:15Z"}
+{"branch":"rajp-patch-4","build_num":"11","executor":"docker","job":"build","level":"info","msg":"config parsed","node_index":0,"node_total":1,"repo_url":"git@github-test.extremenetworks.com:rajp/ux_test_repo.git","revision":"a6cfdf276b24b6ef32564e9e483fcf0b4e4a1eae","task-id":"5c178bce1e9d980016277a44-0-build","task_id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:43:15Z"}
+{"level":"warning","msg":"Using dummy client for Machine","task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:43:15Z"}
+{"count":1,"level":"info","msg":"statsd metric","name":"executor.started","tags":["type:docker"],"task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:43:15Z","type":"counter"}
+{"level":"info","msg":"task started","properties":{"build_agent":"0.1.257-4fbba101","executor":"docker"},"task":"5c178bce1e9d980016277a44-0-build","task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:43:15Z"}
+{"level":"info","msg":"task attributes are set","properties":{"storage-root":"circleci:///5c178bce1e9d980016277a44-0-build/artifacts/","type":"artifacts"},"task":"5c178bce1e9d980016277a44-0-build","task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:43:15Z"}
+{"level":"info","msg":"step started","properties":{"name":"Spin up Environment","tags":"executor:docker","type":"spinup_environment"},"step":0,"task":"5c178bce1e9d980016277a44-0-build","task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:43:15Z"}
+{"docker_api_version":"1.27","level":"info","msg":"docker api version is set","task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:43:15Z"}
+{"level":"info","msg":"Preparing Docker Executor","task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:43:15Z"}
+{"level":"info","msg":"checking task signals","task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:43:15Z"}
+{"level":"info","msg":"creating ephemeral network for task","network_id":"ZZZ_5c178bce1e9d980016277a44-0-build/4EB5DC1B","task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:43:15Z"}
+{"after":"default via 172.21.0.1 dev eth1","before":"default via 172.19.0.1 dev eth0","level":"info","msg":"default route changed, resetting it","task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:43:15Z"}
+{"image_name":"docker:stable","level":"info","msg":"overriding entrypiont","task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:43:15Z"}
+{"duration":209.121799,"level":"info","msg":"statsd metric","name":"docker.container.created","tags":["result:succeeded","type:docker"],"task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:43:16Z","type":"timing"}
+{"build_uri":"http://10.133.142.192/gh/rajp/ux_test_repo/11","container_id":"73756ffc38002d6a3623eba3ca76816281eacac4bb05f01f538ebbc2ab3f6f0c","image_digest":"docker@sha256:201c31cae6daa97001fe9c0cd2e2d3a157ca6447aaa74b070189790445627511","image_name":"docker:stable","is_build_container":true,"level":"info","msg":"created container","task-id":"5c178bce1e9d980016277a44-0-build","task_id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:43:16Z"}
+{"duration":2602.957432,"level":"info","msg":"statsd metric","name":"executor.prepared","tags":["result:succeeded","type:docker"],"task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:43:17Z","type":"timing"}
+{"level":"info","msg":"step ended","properties":{"result":"success"},"step":0,"task":"5c178bce1e9d980016277a44-0-build","task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:43:17Z"}
+{"level":"info","msg":"Running task in Docker Executor","task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:43:17Z"}
+{"Runner":true,"level":"info","msg":"Runner started execution","task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:43:17Z"}
+{"Runner":true,"level":"warning","msg":"git is not installed in this image. Falling back to checkout_native step","task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:43:17Z"}
+{"level":"info","msg":"step started","properties":{"name":"Checkout code","type":"checkout_native"},"step":101,"task":"5c178bce1e9d980016277a44-0-build","task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:43:17Z"}
+{"Runner":true,"level":"info","msg":"Checking out by using native Git client: cloning git@github-test.extremenetworks.com:rajp/ux_test_repo.git /workspace rajp-patch-4","task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:43:17Z"}
+{"level":"info","msg":"step ended","properties":{"result":"success"},"step":101,"task":"5c178bce1e9d980016277a44-0-build","task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:44:01Z"}
+{"level":"info","msg":"step started","properties":{"name":"Setup a remote Docker engine","tags":"reusable:false,version:","type":"setup_remote_docker"},"step":102,"task":"5c178bce1e9d980016277a44-0-build","task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:44:01Z"}
+{"Runner":true,"docker_layer_caching":false,"level":"info","msg":"using docker engine","reusable":false,"task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:44:01Z"}
+{"level":"info","msg":"task attributes are set","properties":{"features":"remote-docker-engine","type":"features-used"},"task":"5c178bce1e9d980016277a44-0-build","task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:44:01Z"}
+{"level":"info","msg":"Request a new Docker Engine","task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:44:02Z"}
+{"Runner":true,"duration":230.768165,"level":"info","msg":"statsd metric","name":"grpc-call","tags":["result:failed","method:/protocol.DockerCreator/requestDockerEngine"],"task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:44:02Z","type":"timing"}
+{"level":"info","msg":"step ended","properties":{"result":"failed"},"step":102,"task":"5c178bce1e9d980016277a44-0-build","task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:44:02Z"}
+{"level":"info","metric":{"type":2,"name":"machine.created","tags":["result:error","type:remote-docker","reusable:false","docker_layer_caching:false","image:docker-default","image_name:docker-default"]},"msg":"metric received from runner","task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:44:02Z"}
+{"duration":0,"level":"info","msg":"statsd metric","name":"machine.created","tags":["result:error","type:remote-docker","reusable:false","docker_layer_caching:false","image:docker-default","image_name:docker-default"],"task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:44:02Z","type":"timing"}
+{"level":"info","msg":"Request to free Docker Engine","task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:44:02Z"}
+{"Runner":true,"duration":0.6888190000000001,"level":"info","msg":"statsd metric","name":"grpc-call","tags":["result:failed","method:/protocol.DockerCreator/freeDockerEngine"],"task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:44:02Z","type":"timing"}
+{"Runner":true,"error":"rpc error: code = Unknown desc = remote docker is not available on this installation","level":"error","msg":"Error freeing up Remote Docker Engine","task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:44:02Z"}
+Error: runner failed
+{"container_id":"73756ffc38002d6a3623eba3ca76816281eacac4bb05f01f538ebbc2ab3f6f0c","exit_code":101,"level":"info","msg":"process finished executing","running":false,"task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:44:02Z"}
+{"duration":44536.444262000005,"level":"info","msg":"statsd metric","name":"executor.run","tags":["result:failed","type:docker"],"task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:44:02Z","type":"timing"}
+{"level":"info","msg":"task ended","properties":{"result":"failed"},"task":"5c178bce1e9d980016277a44-0-build","task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:44:02Z"}
+{"level":"info","msg":"Cleaning up Outer","task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:44:02Z"}
+{"level":"info","msg":"Cleaning up Docker Executor","task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:44:02Z"}
+{"build_uri":"http://10.133.142.192/gh/rajp/ux_test_repo/11","level":"info","msg":"task overall stats","task-id":"5c178bce1e9d980016277a44-0-build","task_id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:44:04Z","usage":{"blkio_stats":{"io_merged_recursive":[],"io_queue_recursive":[],"io_service_bytes_recursive":[{"major":8,"minor":0,"op":"Read","value":0},{"major":8,"minor":0,"op":"Write","value":0},{"major":8,"minor":0,"op":"Sync","value":0},{"major":8,"minor":0,"op":"Async","value":0},{"major":8,"minor":0,"op":"Total","value":0}],"io_service_time_recursive":[],"io_serviced_recursive":[{"major":8,"minor":0,"op":"Read","value":0},{"major":8,"minor":0,"op":"Write","value":0},{"major":8,"minor":0,"op":"Sync","value":0},{"major":8,"minor":0,"op":"Async","value":0},{"major":8,"minor":0,"op":"Total","value":0}],"io_time_recursive":[],"io_wait_time_recursive":[],"sectors_recursive":[]},"cpu_stats":{"cpu_usage":{"percpu_usage":[4746857252,4593558362,4374004013,5484057900,5487701602,7078117246,3297322760,5599098322],"total_usage":40660717457,"usage_in_kernelmode":3120000000,"usage_in_usermode":37200000000},"online_cpus":8,"system_cpu_usage":82067844070000000,"throttling_data":{"periods":0,"throttled_periods":0,"throttled_time":0}},"id":"717839c5478a9416fe91897b41e24c4ca996b4e513fcef784e98d8c1971dbd07","memory_stats":{"limit":4294967296,"max_usage":89972736,"stats":{"active_anon":6627328,"active_file":4096,"cache":8192,"dirty":4096,"hierarchical_memory_limit":4294967296,"inactive_anon":0,"inactive_file":0,"mapped_file":0,"pgfault":2558,"pgmajfault":0,"pgpgin":1995,"pgpgout":376,"rss":6623232,"rss_huge":0,"total_active_anon":6803456,"total_active_file":14176256,"total_cache":50020352,"total_dirty":23146496,"total_inactive_anon":12288,"total_inactive_file":35786752,"total_mapped_file":0,"total_pgfault":11976,"total_pgmajfault":0,"total_pgpgin":22865,"total_pgpgout":9003,"total_rss":6758400,"total_rss_huge":0,"total_unevictable":0,"total_writeback":0,"unevictable":0,"writeback":0},"usage":56778752},"name":"/xenodochial_meitner","networks":{"eth0":{"rx_bytes":20390,"rx_dropped":0,"rx_errors":0,"rx_packets":85,"tx_bytes":20607,"tx_dropped":0,"tx_errors":0,"tx_packets":90},"eth1":{"rx_bytes":19409,"rx_dropped":0,"rx_errors":0,"rx_packets":94,"tx_bytes":9980,"tx_dropped":0,"tx_errors":0,"tx_packets":84}},"num_procs":0,"pids_stats":{"current":19},"precpu_stats":{"cpu_usage":{"percpu_usage":[4746857252,4593558362,4374004013,5484057900,5487701602,7078117246,3297322760,5599098322],"total_usage":40660717457,"usage_in_kernelmode":3120000000,"usage_in_usermode":37200000000},"online_cpus":8,"system_cpu_usage":82067836080000000,"throttling_data":{"periods":0,"throttled_periods":0,"throttled_time":0}},"preread":"2018-12-17T11:44:03.443641924Z","read":"2018-12-17T11:44:04.443515894Z","storage_stats":{}}}
+{"build_uri":"http://10.133.142.192/gh/rajp/ux_test_repo/11","level":"info","msg":"task stats","task-id":"5c178bce1e9d980016277a44-0-build","task_id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:44:06Z","totals":{"CPUUsage":38847073321,"CPUUsageInUsermode":35720000000,"MemoryMaxUsage":83369984,"NetworkRxBytes":23074023,"NetworkTxBytes":1339137,"StorageReadCount":0,"StorageReadSize":0,"StorageWriteCount":0,"StorageWriteSize":0}}
+{"container_id":"73756ffc38002d6a3623eba3ca76816281eacac4bb05f01f538ebbc2ab3f6f0c","exit_code":0,"level":"info","msg":"process finished executing","running":false,"task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:44:06Z"}
+{"level":"info","msg":"deleting ephemeral network for task","network_id":"b3a331cb25037566bdf3a3d0161168a48fc9552d46018622e628b8b5465c8f0c","task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:44:07Z"}
+{"duration":5555.6000030000005,"level":"info","msg":"statsd metric","name":"executor.cleanup","tags":["result:succeeded","type:docker"],"task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:44:08Z","type":"timing"}
+{"count":1,"level":"info","msg":"statsd metric","name":"executor.finished","tags":["type:docker"],"task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:44:08Z","type":"counter"}
+{"level":"info","msg":"Closing EventProcessorClient connection","task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:44:08Z"}
+{"level":"info","msg":"Stopping DMZ Services","task-id":"5c178bce1e9d980016277a44-0-build","time":"2018-12-17T11:44:08Z"}
++ CONTAINER_EXIT=0
++ '[' 0 -ne 0 ']'
++ echo 'build_agent.infra_failed:0|c'
++ nc -w 1 -q 1 -u localhost 8125
++ echo docker container exited 0
++ docker rm -f 717839c5478a9416fe91897b41e24c4ca996b4e513fcef784e98d8c1971dbd07
++ exit 0
